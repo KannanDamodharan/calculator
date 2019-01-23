@@ -1,0 +1,155 @@
+<html>
+<head>
+
+    <script>
+		function calc(){
+			var inputStr = document.getElementById('n1').value;
+			document.getElementById('n1').value = eval(inputStr);
+
+		}
+
+		function clearFields(){
+			document.getElementById("n1").value = "";
+		}
+
+		function textField1(inputValue){
+			document.getElementById('n1').value = document.getElementById('n1').value+inputValue;
+		}
+
+		function turnOn(){
+			document.getElementById("n1").placeholder = "0.0";
+			/*document.getElementById('n1').value = '0.0';*/
+			document.getElementById("btn0").disabled = false;
+			document.getElementById("btn1").disabled = false;
+			document.getElementById("btn2").disabled = false;
+			document.getElementById("btn3").disabled = false;
+			document.getElementById("btn4").disabled = false;
+			document.getElementById("btn5").disabled = false;
+			document.getElementById("btn6").disabled = false;
+			document.getElementById("btn7").disabled = false;
+			document.getElementById("btn8").disabled = false;
+			document.getElementById("btn9").disabled = false;
+			document.getElementById("btn10").disabled = false;
+			document.getElementById("btn11").disabled = false;
+			document.getElementById("btn12").disabled = false;
+			document.getElementById("btn13").disabled = false;
+			document.getElementById("btn14").disabled = false;
+			document.getElementById("btn15").disabled = false;
+			document.getElementById("btn16").disabled = false;
+			document.getElementById("btn17").disabled = false;
+			document.getElementById("btn18").disabled = false;
+		}
+
+		function turnOff(){
+			document.getElementById("n1").placeholder = "";
+			document.getElementById("btn0").disabled = true;
+			document.getElementById("btn1").disabled = true;
+			document.getElementById("btn2").disabled = true;
+			document.getElementById("btn3").disabled = true;
+			document.getElementById("btn4").disabled = true;
+			document.getElementById("btn5").disabled = true;
+			document.getElementById("btn6").disabled = true;
+			document.getElementById("btn7").disabled = true;
+			document.getElementById("btn8").disabled = true;
+			document.getElementById("btn9").disabled = true;
+			document.getElementById("btn10").disabled = true;
+			document.getElementById("btn11").disabled = true;
+			document.getElementById("btn12").disabled = true;
+			document.getElementById("btn13").disabled = true;
+			document.getElementById("btn14").disabled = true;
+			document.getElementById("btn15").disabled = true;
+			document.getElementById("btn16").disabled = true;
+			document.getElementById("btn17").disabled = true;
+			document.getElementById("btn18").disabled = true;
+			}
+		</script>
+
+
+    <style>
+		button{
+			border: 1px solid #cacaca;
+			font-size: 12px;
+			background: #ccc;
+			color: #000;
+			border-radius: 2px;
+			padding: 3px 8px;
+			width: 41px;
+		}
+		.heading h1{
+			  color: #000;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 100;
+		}
+.calc-section{
+			width:232px;
+			height:219px;
+			border: 3px inset #ccc;
+			margin:0 auto;
+			padding:2px;
+		}
+		table{
+			border:2px solid #000;
+			width:231px;
+		}
+		.output-section{
+				border: 2px solid #000;
+    margin-bottom: 3px;
+    padding: 3px;
+				}
+				.output-section input{
+					width:100%;
+				}
+	  </style>
+</head>
+<body>
+<div class="calc-section">
+    <div class="heading">
+        <h1>My Calculator</h1>
+    </div>
+    <div class="output-section">
+        <input type = "text" id ="n1"/>
+    </div>
+    <table border="0" cellspacing="5" cellpadding="3">
+        <tr>
+            <td><button onclick='turnOn()'>On</button></td>
+            <td><button onclick='turnOff()'>Off</button></td>
+            <td><button id="btn0" onclick='textField1("0")' disabled>0</button></td>
+            <td><button id="btn1" onclick='textField1("1")' disabled>1</button></td>
+        </tr>
+
+        <tr>
+            <td><button id="btn2" onclick='textField1("2")' disabled>2</button></td>
+            <td><button id="btn3" onclick='textField1("3")' disabled>3</button></td>
+            <td><button id="btn4" onclick='textField1("4")' disabled>4</button></td>
+            <td><button id="btn5" onclick='textField1("5")' disabled>5</button></td>
+        </tr>
+
+        <tr>
+            <td><button id="btn6" onclick='textField1("6")' disabled>6</button></td>
+            <td><button id="btn7" onclick='textField1("7")' disabled>7</button></td>
+            <td><button id="btn8" onclick='textField1("8")' disabled>8</button></td>
+            <td><button id="btn9" onclick='textField1("9")' disabled>9</button></td>
+        </tr>
+
+
+        <tr>
+            <td><button id="btn10"  onclick='textField1(".")' disabled>.</button></td>
+            <td>
+						<span><button id="btn17"  onclick='textField1("(")' disabled style="width:20px;">(</button><span>
+						<span><button id="btn18"  onclick='textField1(")")' disabled style="width:20px;">)</button></span>
+            </td>
+            <td><button id="btn11"  onclick='textField1("+")' disabled>+</button></td>
+            <td><button id="btn12"  onclick='textField1("-")' disabled>-</button></td>
+        </tr>
+
+        <tr>
+            <td><button id="btn13" onclick='textField1("*")' disabled>*</button></td>
+            <td><button id="btn14" onclick='textField1("/")' disabled>/</button></td>
+            <td><button id="btn15" onclick="calc()" disabled>=</button></td>
+            <td><button id="btn16" onclick='clearFields()' disabled>clear</button></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
